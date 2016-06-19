@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('AppCtrl', function($scope, $ionicModal, $timeout) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, $firebaseAuth) {
 
   // With the new view caching in Ionic, Controllers are only called
   // when they are recreated or on app start, instead of every page change.
@@ -33,17 +33,44 @@ angular.module('starter.controllers', [])
   $scope.doLogin = function() {
     console.log('Doing login', $scope.loginData);
 
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
+    //FIREBASE LOGIN STUFF
+      var ref = new Firebase("https://tater-tag.firebaseio.com/users");
+      ref.authWithPassword({
+        email    : $scope.loginData.username,
+        password : $scope.loginData.password
+      }, function(error, authData) {
+        if (error) {
+          console.log("Login Failed!", error);
+        } else {
+          console.log("Authenticated successfully with payload:", authData);
+      }
+  });
+
     $timeout(function() {
       $scope.closeLogin();
-    }, 1000);
+    }, 500);
   };
-})
-
-.controller('PlaylistsCtrl', function($scope) {
 
 })
 
-.controller('PlaylistCtrl', function($scope, $stateParams) {
+.controller('SpudShotCtrl', function($scope, $firebaseArray) {
+
+  var shopLaunchersRef = new Firebase("https://tater-tag.firebaseio.com/").child('launchers');
+  var launchersData = $firebaseArray(shopLaunchersRef);
+  $scope.launchers = launchersData;
+
+  var shopPotatosRef = new Firebase("https://tater-tag.firebaseio.com/").child('potatos');
+  var potatosData = $firebaseArray(shopPotatosRef);
+  $scope.potatos = potatosData;
+
+})
+
+.controller('AccountCtrl', function($scope, $firebaseArray, $firebaseAuth) {
+
+  var ref = new Firebase("https://tater-tag.firebaseio.com/");
+  var authData = ref.getAuth();
+
+  var accountStatsRef = new Firebase("https://tater-tag.firebaseio.com/").child('users').child(authData.uid).child('stats');
+  var accountStatsData = $firebaseArray(accountStatsRef);
+
 });

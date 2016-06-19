@@ -1,0 +1,97 @@
+{
+  "launchers": {
+    "homemadePotatoCanon": {
+      "id": 1,
+      "name": "Homemade Potato Cannon",
+      "dsecription": "A potato cannon fashioned together with PVC, ducktape and elbow grease.",
+      "price": 500,
+      "distanceMultiplier": 3,
+      "heatMultiplier": 1,
+      "image": "img/launchers/Homemade_Potato_Cannon.jpg"
+    },
+    "modularPotatoGun": {
+      "id": 2,
+      "name": "Modular Potato Gun",
+      "description": "A potato gun able to be configured in many different ways, very versatile.",
+      "price": 750,
+      "distanceMultiplier": 4,
+      "heatMultiplier": 1,
+      "image": "img/launchers/modular_potato_gun.jpg"
+    },
+    "MPC15PotatoCanon": {
+      "id": 3,
+      "name": "MPC-15 Potato Cannon",
+      "description": "A potato cannon capable of launching spuds long distances.",
+      "price": 1000,
+      "distanceMultiplier": 10,
+      "heatMultiplier": 1.5,
+      "image": "img/launchers/mpc_15_potato_cannon.jpg"
+    },
+    "potatoBazooka": {
+      "id": 4,
+      "name": "Potato Bazooka",
+      "description": "A potato gun not to be reckoned with.",
+      "price": 2500,
+      "distanceMultiplier": 7,
+      "heatMultiplier": 3,
+      "image": "img/launchers/potato_bazooka.jpg"
+    },
+    "sawedOffSpudGun": {
+      "id": 5,
+      "name": "Sawed Off Spud Gun",
+      "description": "A potato gun with a short range, but a serious kick.",
+      "price": 2000,
+      "distanceMultiplier": 2,
+      "heatMultiplier": 5,
+      "image": "img/launchers/sawed_off_spud_gun.jpg"
+    },
+    "potatoLauncher": {
+      "id": 6,
+      "name": "Potato Launcher",
+      "description": "A standard store-bought potato launcher.",
+      "price": 750,
+      "distanceMultiplier": 5,
+      "heatMultiplier": 1.5,
+      "image": "img/launchers/potato_launcher.jpg"
+    }
+  },
+
+  "potatos": {
+    "babyRedPotato": {
+      "id": 1,
+      "name": "Baby Red Potato",
+      "description": "A small baby red potato.",
+      "price": 25,
+      "pointMultiplier": 0.75,
+      "heatMultiplier": 1,
+      "image": "img/potatos/baby_red_potato.jpg"
+    },
+    "russetPotato": {
+      "id": 2,
+      "name": "Russet Potato",
+      "description": "Just a normal potato, great for french fries.",
+      "price": 75,
+      "pointMultiplier": 1,
+      "heatMultiplier": 1.5,
+      "image": "img/potatos/Russet_Potato.jpg"
+    },
+    "bakedPotato": {
+      "id": 3,
+      "name": "Baked Potato",
+      "description": "A baked potato with a pad of butter on top.",
+      "price": 100,
+      "pointMultiplier": 1,
+      "heatMultiplier": 1.5,
+      "image": "img/potatos/baked_potato.jpg"
+    },
+    "loadedBakedPotato": {
+      "id": 4,
+      "name": "Loaded Baked Potato",
+      "description": "A baked potato with bacon, cheese, and sour cream, it looks delicious.",
+      "price": 125,
+      "pointMultiplier": 1.5,
+      "heatMultiplier": 1.5,
+      "image": "img/potatos/loaded_baked_potato.jpg"
+    }
+  }
+}

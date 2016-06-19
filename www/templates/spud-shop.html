@@ -5,13 +5,12 @@
       <ion-view>
         <ion-content class="has-header padding">
 
-          <h1>SHOP FOR SPUDS YO</h1>
-
-              <div class="col col-33">DERP</div>
-              <div class="col col-33">DERP</div>
-              <div class="col col-33">DERP</div>
-
-
+          <div class="card" ng-repeat="launcher in launchers">
+            <img src ={{launcher.image}} height=30% width=30%>
+            {{launcher.name}}
+            <br>
+            {{launcher.description}}
+          </div>
 
         </ion-content>
       </ion-view>
@@ -21,10 +20,12 @@
       <ion-view>
         <ion-content class="has-header padding">
 
-          <h1>SHOP FOR TATERS YO</h1>
-          random text
-          <br>
-          <br>better friggin work
+          <div class="card" ng-repeat="potato in potatos">
+            <img src ={{potato.image}} height=15% width=15%>
+            <h3>{{potato.name}}</h3>
+            <br>
+            {{potato.description}}
+          </div>
 
         </ion-content>
       </ion-view>
@@ -34,10 +35,13 @@
       <ion-view>
 
         <ion-content class="has-header padding">
-          <h1>SHOP FOR SWAG YO</h1>
-          random text
-          <br>
-          <br>better friggin work
+          <h1>SHOP FO' SWAG YO</h1>
+
+            <div class="row">
+              <div class="col col-33"><div class="card">DERP</div></div>
+              <div class="col col-33"><div class="card">DERP</div></div>
+              <div class="col col-33"><div class="card">DERP</div></div>
+            </div>
 
         </ion-content>
       </ion-view>
